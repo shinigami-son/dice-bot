@@ -11,7 +11,7 @@
 В данный момент бот не активен!
 
 
-### Список команд:
+### Команды:
 
 /roll и /r - для бросков кубов без привязки к редакциям (без удвоения десяток или повторых бросков таковых);
 
@@ -39,7 +39,7 @@ A fairly simple bot that I wrote to study the aiogram library. In the future I p
 The bot is not active at the moment!
 
 
-### List of commands:
+### Commands:
 
 /roll и /r - for dice rolling without reference to any edition (without doubling tens or second throws thereof)
 
