@@ -6,7 +6,7 @@
 
 Достаточно простенький бот, который я написала с целью изучения библиотеки aiogram. В будущем планирую расширить ряд функций и полноценно его использовать.
 
-Сам бот: https://t.me/dicerpgbot
+[Ссылка на бота](https://t.me/dicerpgbot)
 
 В данный момент бот не активен!
 
@@ -34,7 +34,7 @@ Telegram bot for making dice rolls and searching for information on TTRPG "World
 
 A fairly simple bot that I wrote to study the aiogram library. In the future I plan to expand a number of functions and fully use it.
 
-The bot itself: https://t.me/dicerpgbot
+[Link to the bot](https://t.me/dicerpgbot)
 
 The bot is not active at the moment!
 
