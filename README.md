@@ -19,7 +19,7 @@ The bot is not active at the moment!
 
 /roll4r and /r4r - for dice rolling according to the rules of 20th Edition (with doubling ten);
 
-/search - for search for information. The bot first looks for a specific article on the [Мир Тьмы вики](https://wod.fandom.com/ru/wiki/), if there are no results, then search for similar ones, if there are nothing, then search in Google;
+/search - for search for information. The bot first looks for a specific article on the [Russian World of Darkness wiki](https://wod.fandom.com/ru/wiki/), if there are no results, then search for similar ones, if there are nothing, then search in Google;
 
 /help and /donate - for information about the bot and the opportunity to thank the author.
 
