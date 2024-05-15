@@ -1,12 +1,10 @@
 # dice-bot
 
+Описание:
+
 Телеграм-бот для совершения бросков дайсов и поиска информации по НРИ "Мир Тьмы"
 
-Telegram bot for making dice rolls and searching for information on TTRPG "World of Darkness"
-
 Достаточно простенький бот, который я написала с целью изучения библиотеки aiogram. В будущем планирую расширить ряд функций и полноценно его использовать.
-
-A fairly simple bot that I wrote to study the aiogram library. In the future I plan to expand a number of functions and fully use it.
 
 
 Список команд:
@@ -23,6 +21,11 @@ A fairly simple bot that I wrote to study the aiogram library. In the future I p
 
 Все команды для бросков дайсов запрашивают на ввод три параметра: количество дайсов, грань и сложность броска. Если нет нужды постоянно указывать грань, то можно подправить код, чтобы этот параметр по умолчанию был равен 10.
 
+Description:
+
+Telegram bot for making dice rolls and searching for information on TTRPG "World of Darkness"
+
+A fairly simple bot that I wrote to study the aiogram library. In the future I plan to expand a number of functions and fully use it.
 
 List of commands:
 
