@@ -1,6 +1,6 @@
 # dice-bot
 
-Описание:
+### Описание:
 
 Телеграм-бот для совершения бросков дайсов и поиска информации по НРИ "Мир Тьмы"
 
@@ -11,7 +11,7 @@
 В данный момент бот не активен!
 
 
-Список команд:
+### Список команд:
 
 /roll и /r - для бросков кубов без привязки к редакциям (без удвоения десяток или повторых бросков таковых);
 
@@ -19,7 +19,7 @@
 
 /roll4r и /r4r - для бросков кубов по редакции 20th Edition (с удвоением десяток);
 
-/search - для поиска информации. Бот сначала ищет конкретную статью на сайте "https://wod.fandom.com/ru/wiki/", если там нет результатов, то ищет похожие, если нет ничего, то ищет в гугле;
+/search - для поиска информации. Бот сначала ищет конкретную статью на [Мир Тьмы вики](https://wod.fandom.com/ru/wiki/), если там нет результатов, то ищет похожие, если нет ничего, то ищет в гугле;
 
 /help и /donate - для получения информации о боте и возможности отблагодарить автора.
 
@@ -28,7 +28,7 @@
 
 
 
-Description:
+### Description:
 
 Telegram bot for making dice rolls and searching for information on TTRPG "World of Darkness"
 
@@ -39,7 +39,7 @@ The bot itself: https://t.me/dicerpgbot
 The bot is not active at the moment!
 
 
-List of commands:
+### List of commands:
 
 /roll и /r - for dice rolling without reference to any edition (without doubling tens or second throws thereof)
 
@@ -47,7 +47,7 @@ List of commands:
 
 /roll4r и /r4r - for dice rolling according to the rules of 20th Edition (with doubling ten);
 
-/search - for search for information. The bot first looks for a specific article on the site "https://wod.fandom.com/ru/wiki/", if there are no results, then search for similar ones, if there are nothing, then search in Google;
+/search - for search for information. The bot first looks for a specific article on the [Мир Тьмы вики](https://wod.fandom.com/ru/wiki/), if there are no results, then search for similar ones, if there are nothing, then search in Google;
 
 /help и /donate - for information about the bot and the opportunity to thank the author.
 
