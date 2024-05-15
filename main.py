@@ -16,23 +16,18 @@ async def send_welcome(message: types.Message):
 
     kb = [
         [types.KeyboardButton(text="/help")],
-        [types.KeyboardButton(text="/donate")],
-        [types.KeyboardButton(text="3-я редакция")],
-        [types.KeyboardButton(text="4-я редакция")],
-        [types.KeyboardButton(text="Поиск")]
+        [types.KeyboardButton(text="Revised Edition")],
+        [types.KeyboardButton(text="20th Edition")],
+        [types.KeyboardButton(text="Search")],
+        [types.KeyboardButton(text="Support me")],
     ]
     keyboard = types.ReplyKeyboardMarkup(keyboard=kb, resize_keyboard=True)
-    await message.reply(r"Привет. Я DiceBotWoD. Напишите '/roll' или '/r' и параметры кубов через пробел, а я кину кубы. Например: '/r 7 10 6'", reply_markup=keyboard)
+    await message.reply(r"Hello. I am DiceBotWoD. Print '/roll' or '/r' and dice parameters separated by space, and I will throw dices for you. For example: '/r 7 10 6'", reply_markup=keyboard)
 
 
 @db.message_handler(commands=['dice', 'Dice'])
 async def cmd_dice(message: types.Message):
     await message.answer_dice(emoji="🎲")
-
-
-@db.message_handler(commands=['donate'])
-async def send_donate(message: types.Message):
-    await message.answer("Если вы хотите поддержать меня, то можете отправить пожертвование на одну из этих двух карт:\nyour_card_number_1\nyour_card_number_2\nСпасибо!")
 
 
 @db.message_handler(commands=['search'])
@@ -48,7 +43,7 @@ async def search_info(message: types.Message):
         if not response_url2:
             response_url3 = requests.get(url3)
             if not response_url3:
-                await message.answer('Я ничего не нашёл по вашему запросу')
+                await message.answer("I didn't find anything based on your request")
             else:
                 await message.answer(url3)
         else:
@@ -63,41 +58,43 @@ async def roll_dice(message: types.Message):
     try:
         await message.answer_dice(emoji="🎲")
         result = roll(message.text.split(' '))
-        await message.answer('Результат броска: {}. Успехов: {}'.format(result[0], result[1]))
+        await message.answer('Result: {}. Successes: {}'.format(result[0], result[1]))
     except ValueError:
-        await message.answer("Пожалуйста, укажите параметры [количество, тип, сложность] после команды /roll через пробел")
+        await message.answer("Please, specify the parameters [number of dices, the edge and the difficulty] after the /roll command separated by a space")
 
 
 @db.message_handler(commands=['Roll3r', 'roll3r', 'r3r'])
 async def roll_diceV3(message: types.Message):
-    """Fuction for rolling dices according to the rules of Revised Edition"""
+    """Fuction for rolling dices according to the rules of the Revised Edition"""
     try:
         await message.answer_dice(emoji="🎲")
         result = rollV3(message.text.split(' '))
-        await message.answer('Результат броска: {}. Успехов: {}'.format(result[0], result[1]))
+        await message.answer('Result: {}. Successes: {}'.format(result[0], result[1]))
     except ValueError:
-        await message.answer("Пожалуйста, укажите параметры [количество, тип, сложность] после команды /roll3r через пробел")
+        await message.answer("Please, specify the parameters [number of dices, the edge and the difficulty] after the /roll3r command separated by a space")
 
 
 @db.message_handler(commands=['Roll4r', 'roll4r', 'r4r'])
 async def roll_diceV4(message: types.Message):
-    """Fuction for rolling dices according to the rules of 20th Edition"""
+    """Fuction for rolling dices according to the rules of the 20th Edition"""
     try:
         await message.answer_dice(emoji="🎲")
         result = rollV4(message.text.split(' '))
-        await message.answer('Результат броска: {}. Успехов: {}'.format(result[0], result[1]))
+        await message.answer('Result: {}. Successes: {}'.format(result[0], result[1]))
     except ValueError:
-        await message.answer("Пожалуйста, укажите параметры [количество, тип, сложность] после команды /roll4r через пробел")
+        await message.answer("Please, specify the parameters [number of dices, the edge and the difficulty] after the /roll4r command separated by a space")
 
 
 @db.message_handler()
 async def version(message: types.Message):
-    if message.text == '3-я редакция':
-        await message.answer("Чтобы кинуть кубы по 3-й редакции (Revised), напишите команду '/roll3r' или '/r3r'")
-    elif message.text == '4-я редакция':
-        await message.answer("Чтобы кинуть кубы по 4-й редакции (20th), напишите команду '/roll4r' или '/r4r'")
-    elif message.text == 'Поиск':
-        await message.answer("Для поиска информации введите команду '/search' и то, что хотите найти")
+    if message.text == 'Revised Edition':
+        await message.answer("To roll dices according to the Revised Edition use the command '/roll3r' or '/r3r' with parameters")
+    elif message.text == '20th Edition':
+        await message.answer("To roll dices according to the 20th Edition use the command '/roll4r' or '/r4r' with parameters")
+    elif message.text == 'Search':
+        await message.answer("To search for information use the command '/search' with the word or phrase for which you want to find information")
+    elif message.text == 'Support me':
+        await message.answer("If you want to support me, you can send a donation to one of these cards:\nyour_card_number_1\nyour_card_number_2\nThank you!")
 
 
 if __name__ == '__main__':
